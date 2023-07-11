@@ -1,0 +1,69 @@
+{
+  "config": "{\"version\":\"5.44\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.46\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2007a808c20396e95854\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.779286926994907,\"y\":110.0169779286927,\"z\":3000,\"width\":700.4414261460103,\"height\":596.5365025466893,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"World Population.Country\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(World Population.Population)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"World Population\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Country\"},\"Name\":\"World Population.Country\",\"NativeReferenceName\":\"Country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Population\"}},\"Function\":0},\"Name\":\"Sum(World Population.Population)\",\"NativeReferenceName\":\"Sum of Population\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Population\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 596.54,
+          "width": 700.44,
+          "x": 9.78,
+          "y": 110.02,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"391f4607057aef4f82b8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.779286926994907,\"y\":13.446519524617997,\"z\":1000,\"width\":453.5144312393888,\"height\":83.1239388794567,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"World population Data\",\"textStyle\":{\"fontSize\":\"28pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 83.12,
+          "width": 453.51,
+          "x": 9.78,
+          "y": 13.45,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"5fcfdbd893a60c69ab00\",\"layouts\":[{\"id\":0,\"position\":{\"x\":765.2292020373515,\"y\":426.6213921901528,\"z\":0,\"width\":501.188455008489,\"height\":293.3786078098472,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"World Population.sub Region\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(World Population.Population)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"World Population\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"sub Region\"},\"Name\":\"World Population.sub Region\",\"NativeReferenceName\":\"sub Region\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Population\"}},\"Function\":0},\"Name\":\"Sum(World Population.Population)\",\"NativeReferenceName\":\"Sum of Population\"}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 293.38,
+          "width": 501.19,
+          "x": 765.23,
+          "y": 426.62,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8ba4e477389f8788e310\",\"layouts\":[{\"id\":0,\"position\":{\"x\":765.2292020373515,\"y\":96.5704584040747,\"z\":2000,\"width\":514.634974533107,\"height\":306.8251273344652,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"World Population.Country\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(World Population.Population)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"World Population\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Country\"},\"Name\":\"World Population.Country\",\"NativeReferenceName\":\"Country\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Population\"}},\"Function\":0},\"Name\":\"Sum(World Population.Population)\",\"NativeReferenceName\":\"Sum of Population\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 306.83,
+          "width": 514.63,
+          "x": 765.23,
+          "y": 96.57,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

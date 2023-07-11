@@ -1,0 +1,358 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"World Population\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.119.582.0 (23.07)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-ZA",
+    "cultures": [
+      {
+        "name": "en-ZA",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-GB",
+    "tables": [
+      {
+        "name": "DateTableTemplate_2b8d12ec-87bf-480f-b8c4-d6d78a0b3c26",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "3820575b-1c2e-43bc-b4e9-e7c894ff0bc2",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "92ea105c-a0ac-47c7-8b8e-08298b9a4acc",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "500b24cf-fc25-4b42-a43d-d423097799d5",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "7a9542ab-0025-493d-b852-3a3ed03a3fd5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "eca92c59-a029-4582-befb-9c9ffed59986",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "e20aad92-e6d1-4590-b843-14a3ea2aecf8",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "223c082b-e18a-4bf4-9941-4c3ea0fc2a76",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "36fba3c0-416b-4fb5-b3d6-b6f205619c84",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "f6cb64bd-df39-46d2-888c-9a91b8688067",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "9374f094-28c3-4685-a7a2-844fb108a2e5",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "df283394-d429-47bb-98ff-0e8d51c20b3c",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "af3b7706-8993-423e-9109-3bd2ac3ececc"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "34364e67-3e61-4500-80c4-7c6de4bc9ecf",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_2b8d12ec-87bf-480f-b8c4-d6d78a0b3c26",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "World Population",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "07d76320-fe65-4fab-9bd9-6b893b8746e6",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Population",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "35acffef-218c-42cd-a482-778b52ee4b0b",
+            "sourceColumn": "Population",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "continental",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4119485f-3a8c-451b-8d72-1477efa146bc",
+            "sourceColumn": "continental",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sub Region",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "78795e31-c295-4c78-843f-69e7c2c56420",
+            "sourceColumn": "sub Region",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "eb747c03-383c-4f6e-83c0-642f1d76f476",
+        "partitions": [
+          {
+            "name": "World Population",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Web.BrowserContents(\"https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)\"),",
+                "    #\"Extracted Table From Html\" = Html.Table(Source, {{\"Column1\", \"TABLE.wikitable.sortable.static-row-numbers.plainrowheaders.srn-white-background > * > TR > :nth-child(1)\"}, {\"Column2\", \"TABLE.wikitable.sortable.static-row-numbers.plainrowheaders.srn-white-background > * > TR > :nth-child(2)\"}, {\"Column3\", \"TABLE.wikitable.sortable.static-row-numbers.plainrowheaders.srn-white-background > * > TR > :nth-child(3)\"}, {\"Column4\", \"TABLE.wikitable.sortable.static-row-numbers.plainrowheaders.srn-white-background > * > TR > :nth-child(4)\"}, {\"Column5\", \"TABLE.wikitable.sortable.static-row-numbers.plainrowheaders.srn-white-background > * > TR > :nth-child(5)\"}, {\"Column6\", \"TABLE.wikitable.sortable.static-row-numbers.plainrowheaders.srn-white-background > * > TR > :nth-child(6)\"}}, [RowSelector=\"TABLE.wikitable.sortable.static-row-numbers.plainrowheaders.srn-white-background > * > TR\"]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Extracted Table From Html\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Country / Area\", type text}, {\"UN continentalregion[4]\", type text}, {\"UN statisticalsubregion[4]\", type text}, {\"Population(1 July 2022)\", Int64.Type}, {\"Population(1 July 2023)\", Int64.Type}, {\"Change\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Population(1 July 2022)\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Columns\", each ([#\"Country / Area\"] <> \"World\")),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Filtered Rows\",{\"Change\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns1\",{{\"Population(1 July 2023)\", \"Population\"}, {\"Country / Area\", \"Country\"}, {\"UN continentalregion[4]\", \"continental\"}, {\"UN statisticalsubregion[4]\", \"sub Region\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
